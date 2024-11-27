@@ -21,12 +21,12 @@ if (dir.exists(paste0(wd,"/controlnn/"))){
 } else {
   dir.create(paste0(wd,"/controlnn/"))}
 
-# Liste aller Dateien mit .txt format im Zielordner
+# List of all files with .txt format in the target folder
 filelist <- list.files(pattern = "*.txt")
 
 #How many neigbours should be used (always intended number +1 for first line)
 nnn <- 20
-#Tabelle für Gesamtergebnisse
+#table for final results
 Dev_master <- data.frame()
 
 Zähler <-1
@@ -39,7 +39,7 @@ for (file in filelist) {
   
   
   
-  # species sollte in der Ergebnisstabelle als Spalte auftauchen, ebenso ID
+  #species and ID should be included as columns in the results table
   table <- read.table(file_name, header = FALSE, nrows = 1, sep = ",")
   genus <- table [,1]
   species <- table [,2]
