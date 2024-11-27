@@ -2,8 +2,8 @@
 #START
 #prepare txt-files: Insert one line at the very top in the following format: Gattung, Art, ID
 #The next four lines are the coordinates of the four corners, so only two numbers
-#another two lines of coordinates for the scalebar, not yet used, might be NA
-#IMPORTANT: The "counter" for the number of points has no header in 8 two.
+#another two lines of coordinates for the scalebar
+#IMPORTANT: column one has no heading in exported file!
 #Thereby it will not be added as a column in the data frame. Add the header "time" manually to the .txt file over the first column (total column nr of data frame should be seven)
 #TXT-FILENAME IS NOT IMPORTANT
 #The image the points where put in should be saved as a .tif file in the workdirectory
