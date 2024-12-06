@@ -8,7 +8,8 @@
 #TXT-FILENAME IS NOT IMPORTANT
 #The image the points where put in should be saved as a .tif file in the workdirectory
 #IMAGE NAME IS IMPORTANT, SHOULD BE: "ID"points
-#IMAGE SHOULD HAVE 400 DPI - or adjust DPI in the plot section: map of aligment plot
+#IMAGE SHOULD HAVE 400 DPI - or adjust DPI here
+dpi_user <- 400
 ####Library prep####
 {if (!requireNamespace(c("tiff","dplyr","ggplot2","viridis","RColorBrewer"), quietly = TRUE)) {
   install.packages(c("tiff","dplyr","ggplot2","viridis","RColorBrewer"))}
@@ -341,7 +342,7 @@ wd<-getwd()
       #p=p + coord_fixed(ratio = width / height) #Gibt das Seitenverhältnis des Zeichenbereiches an, muss noch dynamisch vom Bild abgenommen werden!!!
       print(p)
       
-      ggsave(paste0(wd,"/",ID,type,"/",ID,type,"overall_Alig_map.png"), height = height/400*5, width = width/400*5, plot = p, dpi = 150 , limitsize = FALSE) #Replace with the DPI of your .tif files if necessary
+      ggsave(paste0(wd,"/",ID,type,"/",ID,type,"overall_Alig_map.png"), height = height/dpi_user*5, width = width/dpi_user*5, plot = p, dpi = 150 , limitsize = FALSE) #Replace with the DPI of your .tif files if necessary
     }
     
     
@@ -392,7 +393,7 @@ wd<-getwd()
             axis.ticks = element_blank())
       
     
-    ggsave(paste0(wd,"/",ID,type,"/",ID,type,"strgh_within_map.png"), height = height/400*5, width = width/400*5, plot = p5, dpi = 150 , limitsize = FALSE) #CORRECT DPI HAS TO BE SET HERE, 400 DPI is intended, as this is the output of our axio cam
+    ggsave(paste0(wd,"/",ID,type,"/",ID,type,"strgh_within_map.png"), height = height/dpi_user*5, width = width/dpi_user*5, plot = p5, dpi = 150 , limitsize = FALSE) #CORRECT DPI HAS TO BE SET HERE, 400 DPI is intended, as this is the output of our axio cam
     
    
     #histogram
