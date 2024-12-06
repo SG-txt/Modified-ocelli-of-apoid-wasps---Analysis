@@ -341,7 +341,7 @@ wd<-getwd()
       #p=p + coord_fixed(ratio = width / height) #Gibt das Seitenverhältnis des Zeichenbereiches an, muss noch dynamisch vom Bild abgenommen werden!!!
       print(p)
       
-      ggsave(paste0(wd,"/",ID,type,"/",ID,type,"overall_Alig_map.png"), height = height/400*5, width = width/400*5, plot = p, dpi = 150 , limitsize = FALSE) #Hier muss die entsprechende DPI eingesetzt werden, Input fotos sollten also immer 400 dpi haben
+      ggsave(paste0(wd,"/",ID,type,"/",ID,type,"overall_Alig_map.png"), height = height/400*5, width = width/400*5, plot = p, dpi = 150 , limitsize = FALSE) #Replace with the DPI of your .tif files if necessary
     }
     
     
