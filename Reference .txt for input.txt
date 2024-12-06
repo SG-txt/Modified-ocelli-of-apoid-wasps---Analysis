@@ -1,4 +1,4 @@
-genus,species,ID,ocellus_type,scalebar_size,sex,modified_y_n,complete
+Genus,Species,ID,ocellus_type,scalebar_size,sex,modified_y_n,complete
 -0.001	0.009 
 11.759	-0.001
 0.001	3.769
